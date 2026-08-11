@@ -1,36 +1,216 @@
+:root
+{
+    --cor-pagina: #faf9f7;
+    --cor-superficie: #ffffff;
+    --cor-escura: #232120;
+    --cor-tinta: #1a1917;
+    --cor-tinta-media: #57534e;
+    --cor-tinta-suave: #736d65;
+    --cor-borda: #e7e3dd;
+    --cor-destaque: #f4b400;
+    --cor-destaque-escuro: #8a5a00;
+}
+
 body
 {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor-tinta);
+    background-color: var(--cor-pagina);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
     gap: 1.5625rem;
 }
 
 header, footer
 {
-    background-color: rgb(50, 50, 50);
+    background-color: var(--cor-escura);
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--cor-superficie);
+}
+
+header h1
+{
+    margin: 1rem 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+footer
+{
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: var(--cor-borda);
+    padding: 0.75rem 0;
 }
 
 main
 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1.5625rem;
+    max-width: 100%;
+    flex-grow: 1;
 }
 
 .title-card
 {
-    border: 2px rgb(66, 66, 66) solid;
+    background-color: var(--cor-superficie);
+    border: 1px var(--cor-borda) solid;
     border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(26, 25, 23, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 9.5rem;
+}
+
+.title-number
+{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--cor-destaque);
+    color: var(--cor-tinta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.title-thumbnail
+{
+    width: auto;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    align-self: stretch;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    margin: -1.1rem 0;
+}
+
+.title-data
+{
+    width: 11.75rem;
+    flex: none;
+}
+
+.title-name
+{
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+.title-years
+{
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--cor-destaque-escuro);
+}
+
+.title-categories
+{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--cor-tinta-suave);
+}
+
+.title-description
+{
+    width: 22rem;
+    flex: none;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--cor-tinta-media);
+}
+
+.divider
+{
+    border: 0;
+    width: 1px;
+    background-color: var(--cor-borda);
+    align-self: stretch;
+    margin: 0.375rem 0;
+}
+
+.title-avaliation
+{
+    width: 9rem;
+    flex: none;
+    text-align: center;
+}
+
+.title-imdb
+{
+    font-size: 1.0625rem;
+    font-weight: 700;
+}
+
+.title-rotten
+{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--cor-tinta-media);
+}
+
+.title-data p, .title-avaliation p
+{
+    margin: 0.25rem 0;
+}
+
+@media (max-width: 48rem)
+{
+    main
+    {
+        width: 90%;
+    }
+
+    .title-card
+    {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .title-thumbnail
+    {
+        align-self: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .title-data, .title-description, .title-avaliation
+    {
+        width: 100%;
+    }
+
+    .divider
+    {
+        display: none;
+    }
 }
