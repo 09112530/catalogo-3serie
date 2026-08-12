@@ -13,6 +13,10 @@
     --cor-remover-forte: #f8d4d0;
     --cor-remover-borda: #f3c6c1;
     --cor-remover-tinta: #b3261e;
+    --cor-adicionar: #eaf7ee;
+    --cor-adicionar-forte: #d3edda;
+    --cor-adicionar-borda: #c2e2cc;
+    --cor-adicionar-tinta: #1d7a43;
 }
 
 body
@@ -77,8 +81,76 @@ main
     align-items: center;
 }
 
+.title-add
+{
+    width: 3rem;
+    height: 3rem;
+    border: 1px var(--cor-adicionar-borda) solid;
+    border-radius: 50%;
+    background-color: var(--cor-adicionar);
+    color: var(--cor-adicionar-tinta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.title-add svg
+{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.title-add:hover
+{
+    background-color: var(--cor-adicionar-forte);
+    transform: scale(1.08);
+}
+
+.title-row-removing
+{
+    opacity: 0;
+    transform: translateX(-2rem);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.title-confirm
+{
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px var(--cor-adicionar-borda) solid;
+    border-radius: 50%;
+    background-color: var(--cor-adicionar);
+    color: var(--cor-adicionar-tinta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.title-confirm svg
+{
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.title-confirm:hover
+{
+    background-color: var(--cor-adicionar-forte);
+}
+
 .title-card
 {
+    position: relative;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     background-color: var(--cor-superficie);
     border: 1px var(--cor-borda) solid;
@@ -92,52 +164,77 @@ main
     height: 9.5rem;
 }
 
-.title-delete
+.title-actions
 {
     position: absolute;
     right: 0;
     top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(0.75rem, -50%) scale(0.8);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.title-actions button
+{
     width: 2.75rem;
     height: 2.75rem;
-    border: 1px var(--cor-remover-borda) solid;
     border-radius: 50%;
-    background-color: var(--cor-remover);
-    color: var(--cor-remover-tinta);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(0.75rem, -50%) scale(0.8);
-    transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.title-delete svg
+.title-actions svg
 {
     width: 1.25rem;
     height: 1.25rem;
 }
 
-.title-row:hover .title-card,
-.title-row:has(.title-delete:focus-visible) .title-card
+.title-edit
 {
-    transform: translateX(-3.5rem);
-    box-shadow: 0 4px 10px rgba(26, 25, 23, 0.1);
+    border: 1px var(--cor-borda) solid;
+    background-color: var(--cor-superficie);
+    color: var(--cor-tinta-media);
 }
 
-.title-row:hover .title-delete,
-.title-delete:focus-visible
+.title-edit:hover
 {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(0, -50%) scale(1);
+    background-color: var(--cor-pagina);
+    color: var(--cor-tinta);
+}
+
+.title-delete
+{
+    border: 1px var(--cor-remover-borda) solid;
+    background-color: var(--cor-remover);
+    color: var(--cor-remover-tinta);
 }
 
 .title-delete:hover
 {
     background-color: var(--cor-remover-forte);
+}
+
+.title-row:hover .title-card,
+.title-row:has(.title-actions :focus-visible) .title-card
+{
+    transform: translateX(-3.5rem);
+    box-shadow: 0 4px 10px rgba(26, 25, 23, 0.1);
+}
+
+.title-row:hover .title-actions,
+.title-actions:has(:focus-visible)
+{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(0, -50%) scale(1);
 }
 
 .title-thumbnail-box
@@ -175,6 +272,26 @@ main
     border-radius: 0.5rem;
     flex-shrink: 0;
     margin: -1.1rem 0;
+}
+
+.title-thumbnail-empty
+{
+    width: 17.25rem;
+    background-color: var(--cor-pagina);
+    border: 1px var(--cor-borda) dashed;
+    box-sizing: border-box;
+}
+
+[contenteditable]:hover
+{
+    background-color: var(--cor-pagina);
+}
+
+[contenteditable]:focus
+{
+    outline: 2px var(--cor-destaque) solid;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
 }
 
 .title-data
@@ -286,6 +403,11 @@ main
         width: 100%;
     }
 
+    .title-thumbnail-empty
+    {
+        width: 100%;
+    }
+
     .title-number
     {
         position: absolute;
@@ -306,14 +428,20 @@ main
     }
 
     .title-row:hover .title-card,
-    .title-row:has(.title-delete:focus-visible) .title-card
+    .title-row:has(.title-actions :focus-visible) .title-card
     {
         transform: none;
         box-shadow: 0 1px 3px rgba(26, 25, 23, 0.06);
     }
 
-    .title-delete,
-    .title-row:hover .title-delete
+    .title-confirm
+    {
+        right: 4rem;
+        bottom: 1rem;
+    }
+
+    .title-actions,
+    .title-row:hover .title-actions
     {
         top: auto;
         bottom: 0.75rem;
@@ -326,7 +454,7 @@ main
 
 @media (prefers-reduced-motion: reduce)
 {
-    .title-card, .title-delete
+    .title-card, .title-actions, .title-actions button, .title-add, .title-confirm, .title-row-removing
     {
         transition: none;
     }
