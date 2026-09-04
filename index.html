@@ -1,135 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Catálogo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo</title>
     <meta name="author" content="Iago Teixeira">
     <link href="./style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Minhas Recomendações</h1>
+        <h1>Catálogo</h1>
     </header>
     <main>
-        <div class="title-row">
-            <div class="title-card" id="title1">
-                <div class="title-thumbnail-box">
-                    <p class="title-number">1</p>
-                    <img class="title-thumbnail" src="./assets/images/title-1/thumbnail.webp" alt="Personagem John Snow segurando uma espada enquanto está sentado no Trono de Ferro. Há o logo da HBO e o título da obra, Game of Thrones.">
-                </div>
-                <div class="title-data">
-                    <p class="title-name">Game of Thrones</p>
-                    <p class="title-years">2011-2019</p>
-                    <p class="title-categories">Fantasia, Drama, Ação</p>
-                </div>
-                <p class="title-description">Épica adaptação dos livros de George R. R. Martin. Conflitos, batalhas e personagens inesquecíveis na luta pelo Trono de Ferro.</p>
-                <div class="divider"></div>
-                <div class="title-avaliation">
-                    <p class="title-imdb">9.3/10 IMDb</p>
-                    <p class="title-rotten">89% Rotten Tomatoes</p>
-                </div>
-            </div>
-            <div class="title-actions">
-                <button class="title-edit" type="button" aria-label="Editar Game of Thrones">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
-                    </svg>
-                </button>
-                <button class="title-delete" type="button" aria-label="Remover Game of Thrones">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M3 6h18" />
-                        <path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2" />
-                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-                        <path d="M10 11v6" />
-                        <path d="M14 11v6" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="title-row">
-            <div class="title-card" id="title2">
-                <div class="title-thumbnail-box">
-                    <p class="title-number">2</p>
-                    <img class="title-thumbnail" src="./assets/images/title-2/thumbnail.webp" alt="Personagens Walter White e Jessy Pink sentados em uma cadeira.">
-                </div>
-                <div class="title-data">
-                    <p class="title-name">Breaking Bad</p>
-                    <p class="title-years">2008-2013</p>
-                    <p class="title-categories">Crime, Drama, Suspense</p>
-                </div>
-                <p class="title-description">A transformação de um professor de química em um traficante de metanfetamina. Uma história intensa e impecável.</p>
-                <div class="divider"></div>
-                <div class="title-avaliation">
-                    <p class="title-imdb">9.5/10 IMDb</p>
-                    <p class="title-rotten">96% Rotten Tomatoes</p>
-                </div>
-            </div>
-            <div class="title-actions">
-                <button class="title-edit" type="button" aria-label="Editar Breaking Bad">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
-                    </svg>
-                </button>
-                <button class="title-delete" type="button" aria-label="Remover Breaking Bad">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M3 6h18" />
-                        <path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2" />
-                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-                        <path d="M10 11v6" />
-                        <path d="M14 11v6" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="title-row">
-            <div class="title-card" id="title3">
-                <div class="title-thumbnail-box">
-                    <p class="title-number">3</p>
-                    <img class="title-thumbnail" src="./assets/images/title-3/thumbnail.webp" alt="Personagens da série encenando para uma foto dentro de uma moldura de quadro">
-                </div>
-                <div class="title-data">
-                    <p class="title-name">Friends</p>
-                    <p class="title-years">1994-2004</p>
-                    <p class="title-categories">Comédia, Romance</p>
-                </div>
-                <p class="title-description">As vidas, amores e amizades de seis amigos em Nova Iorque. Um comédia icônica e divertida.</p>
-                <div class="divider"></div>
-                <div class="title-avaliation">
-                    <p class="title-imdb">8.9/10 IMDb</p>
-                    <p class="title-rotten">83% Rotten Tomatoes</p>
-                </div>
-            </div>
-            <div class="title-actions">
-                <button class="title-edit" type="button" aria-label="Editar Friends">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
-                    </svg>
-                </button>
-                <button class="title-delete" type="button" aria-label="Remover Friends">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M3 6h18" />
-                        <path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2" />
-                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-                        <path d="M10 11v6" />
-                        <path d="M14 11v6" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <button class="title-add" type="button" aria-label="Adicionar título">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 5v14" />
-                <path d="M5 12h14" />
-            </svg>
-        </button>
+        <section id="lista" class="lista"></section>
+        <button id="btn-adicionar" class="btn-adicionar" title="Adicionar obra">+</button>
     </main>
     <footer>
-        <p>&copy 2026 - Iago Teixeira | SENAI</p>
+        <p>&copy; Copyright - 2026 | Iago Teixeira</p>
     </footer>
+    <dialog id="modal">
+        <form id="form-obra" class="form-obra">
+            <h2 id="modal-titulo">Nova obra</h2>
+            <input type="hidden" id="campo-id" name="id">
+            <label for="campo-nome">Nome</label>
+            <input type="text" id="campo-nome" name="nome" maxlength="120" required>
+            <div class="form-linha">
+                <div>
+                    <label for="campo-ano-inicio">Ano de início</label>
+                    <input type="number" id="campo-ano-inicio" name="ano_inicio"
+                    min="1900" max="2100" required>
+                </div>
+                <div>
+                    <label for="campo-ano-fim">Ano de fim</label>
+                    <input type="number" id="campo-ano-fim" name="ano_fim"
+                    min="1900" max="2100" placeholder="vazio = em exibição">
+                </div>
+            </div>
+            <label for="campo-categorias">Categorias</label>
+            <input type="text" id="campo-categorias" name="categorias"
+            maxlength="120" placeholder="Drama, Ação, Suspense" required>
+            <label for="campo-descricao">Descrição</label>
+            <textarea id="campo-descricao" name="descricao" rows="4" required></textarea>
+            <label for="campo-imagem">Imagem (caminho ou URL)</label>
+            <input type="text" id="campo-imagem" name="imagem"
+            maxlength="255" placeholder="assets/images/nome.webp" required>
+            <label for="campo-imagem-alt">Descrição da imagem (acessibilidade)</label>
+            <input type="text" id="campo-imagem-alt" name="imagem_alt"
+            maxlength="255" required>
+            <div class="form-linha">
+                <div>
+                    <label for="campo-nota-imdb">Nota IMDb (0 a 10)</label>
+                    <input type="number" id="campo-nota-imdb" name="nota_imdb"
+                    min="0" max="10" step="0.1" required>
+                </div>
+                <div>
+                    <label for="campo-nota-rotten">Rotten Tomatoes (%)</label>
+                    <input type="number" id="campo-nota-rotten" name="nota_rotten"
+                    min="0" max="100" step="1" required>
+                </div>
+            </div>
+            <div class="form-botoes">
+                <button type="button" id="btn-cancelar" class="btn-secundario">Cancelar</button>
+                <button type="submit" class="btn-primario">Salvar</button>
+            </div>
+        </form>
+    </dialog>
     <script src="./script.js"></script>
 </body>
 </html>
